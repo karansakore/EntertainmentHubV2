@@ -1,0 +1,106 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <script src="~/Scripts/JavaScript.js"></script>
+    <style>
+        .mySlides {
+            display:inline-block;
+            
+        }
+    </style>
+
+</head>
+<body style="background-color: #0d0d0d ">
+    <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+        <div class="container-fluid" style="color: #f5ccff">
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="~/Images/logoimg3.png" style="width:125px; height:107px;" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color: #f5ccff">
+                <span class="navbar-toggler-icon" style="color: #f5ccff"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="color: #f5ccff">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="@Url.Action("Index", "Home")" style="color: #f5ccff; font-family: 'Times New Roman', Times, serif; letter-spacing: 1.5px;">Home</a>
+                    <a class="nav-link" href="@Url.Action("Index", "Excel")" style="color: #f5ccff; font-family: 'Times New Roman', Times, serif; letter-spacing: 1.5px;">Videos</a>
+                    <a class="nav-link" href="@Url.Action("Index", "PDF")" style="color: #f5ccff; font-family: 'Times New Roman', Times, serif; letter-spacing: 1.5px;">Books</a>
+                    <a class="nav-link" href="@Url.Action("Index", "Music")" style="color: #f5ccff; font-family: 'Times New Roman', Times, serif; letter-spacing: 1.5px;">Music</a>
+                    <a class="nav-link" href="@Url.Action("Index", "Weather")" style="color: #f5ccff; font-family: 'Times New Roman', Times, serif; letter-spacing: 1.5px;">Weather</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    @****************************************************************************************************************@
+
+    <div class="w3-content w3-section " style="margin-top:150px;">
+        <a href="https://www.amazon.in/minitv/tp/5cf7a5b5-51f1-4bf9-a13c-39502bb162bf"><img class="mySlides" src="~/Images/img3.jpg" style="width: auto; max-width: 100%;  height:auto"></a>
+        <a href="https://www.theasianschool.net/blog/importance-of-books-in-students-life/#1-1-books-make-student-intelligent"><img class="mySlides" src="~/Images/img7.jpg" style="width: auto; max-width: 100%;  height:auto"></a>
+        <a href="https://www.imdb.com/title/tt24268454/"><img class="mySlides" src="~/Images/img8.jpg" style="width: auto; max-width: 100%;  height:auto"></a>
+        <a href="https://www.imdb.com/title/tt3679040/"><img class="mySlides" src="~/Images/img6.png" style="width: auto; max-width: 100%;  height:auto"></a>
+        <a href="https://www.imdb.com/title/tt8178634/?ref_=fn_al_tt_1"><img class="mySlides" src="~/Images/img9.jpg" style="width: auto; max-width: 100%;  height:auto"></a>
+        <a href="@Url.Action("Index", "Music")"><img class="mySlides" src="~/Images/I1.png" style="width: auto; max-width: 100%;  height:auto"></a>
+    </div>
+
+    @********************************************************************************************************@
+
+
+
+    <br />
+    <h1 style="color: #f5ccff; text-align: center; font-family: 'Times New Roman', Times, serif; letter-spacing: 10px ">Entertainment - Hub</h1>
+    <hr style="color:white" />
+    <br />
+
+   
+    <h3 style="font-family: 'Times New Roman'; letter-spacing: 2px; color: #f5ccff"><a href="@Url.Action("Index", "Excel")" style="text-decoration: none; color: inherit;">Movies</a></h3>
+    <hr style="color: #f5ccff" />
+    <a href="https://www.jiocinema.com/movies/vikram-vedha/3744709"><img src="https://drive.google.com/uc?id=1ew078BnOzTqQc6c1iP56Tv-pzf8kgAo7" alt="..." style="color: wheat; border-radius: 15px;transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.2)';" onmouseout="this.style.transform='scale(1)';"></a>
+    <a href="https://www.jiocinema.com/movies/force-2/3496247"><img src="https://drive.google.com/uc?id=1IJVELgrqCaRjMZ8eQxPaYOq79p66rZa-" alt="..." style="color: wheat; border-radius:15px;transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.2)';" onmouseout="this.style.transform='scale(1)';"></a>
+    <a href="https://www.amazon.in/minitv/tp/9534dd7e-bc63-4994-be25-218d65f2f42d"><img src="https://drive.google.com/uc?id=1biW0gnqGuJmvd0AUH0_gqzMQIZXEk-T_" alt="..." style="color: wheat; border-radius:15px;transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.2)';" onmouseout="this.style.transform='scale(1)';"></a>
+    <a href="https://www.jiocinema.com/movies/badlapur/3488466"><img src="https://drive.google.com/uc?id=1rtg4-CpOF-qDZlfKeie93PWbA3kt6520" alt="..." style="color: wheat; border-radius:15px;transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.2)';" onmouseout="this.style.transform='scale(1)';"></a>
+
+    <hr style="color:white" />
+
+    <h3 style="font-family: 'Times New Roman'; letter-spacing: 2px; color: #f5ccff"><a href="@Url.Action("Index", "PDF")" style="text-decoration: none; color: inherit;">Books</a></h3>
+    <hr style="color: #f5ccff" />
+    <a href="https://drive.google.com/file/d/1DuYMP2tMy7ncV3UiUIzrIBSzSxt6yvYl/view"><img src="https://drive.google.com/uc?id=1Z5ZPBWIBHJvTs3xMR9UFcjv9W_krYbMa" alt="..." style="margin-left:50px;color: wheat; border-radius: 15px;transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.2)';" onmouseout="this.style.transform='scale(1)';"></a>
+    <a href="https://mangareader.to/read/dragon-ball-163/en/chapter-194"><img src="https://drive.google.com/uc?id=11JJ6BGoi2mR-rDvbo5pm8Vc_roAjHuX2" alt="..." style="margin-left: 50px; color: wheat; border-radius: 15px; transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.2)';" onmouseout="this.style.transform='scale(1)';"></a>
+    <a href="https://readnovelfree.com/p/37144_1"><img src="https://drive.google.com/uc?id=1azVTnlLW3_pj-nSElzcYAReDKBIdAstO" alt="..." style="margin-left: 50px; color: wheat; border-radius: 15px; transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.2)';" onmouseout="this.style.transform='scale(1)';"></a>
+    <a href="https://mangareader.to/read/spy-x-family-86/en/chapter-1"><img src="https://drive.google.com/uc?id=1lHDZcCvl1IBQ_eS1fG3qCO8oKC9nH5Le" alt="..." style="margin-left: 50px; color: wheat; border-radius: 15px; transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.2)';" onmouseout="this.style.transform='scale(1)';"></a>
+    <a href="https://mangareader.to/read/skip-and-loafer-1103/en/chapter-1"><img src="https://drive.google.com/uc?id=1gEI4kgyqIJCL2DKDm56UwkBiJV2Fuv9f" alt="..." style="margin-left: 50px; color: wheat; border-radius: 15px; transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.2)';" onmouseout="this.style.transform='scale(1)';"></a>
+
+    <hr style="color:white" />
+    @********************************************************************************************************@
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading" style="color: #f5ccff;"><img src="~/Images/logoimg3.png" style="width:100px; height:auto;" /></div>
+        <div class="panel-body">
+            <p style="color: #f5ccff;">&copy; @DateTime.Now.Year - EntertainmentHub</p>
+        </div>
+
+    </div>
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2500); // Change image every 2 seconds
+        }
+    </script>
+
+
+    <script src="~/Scripts/JavaScript.js"></script>
+</body>
+</html>

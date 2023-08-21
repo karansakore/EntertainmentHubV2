@@ -1,0 +1,120 @@
+﻿@model EntertainmentHub.Models.WeatherData
+
+<body style="background-color: black; padding-top: 150px;">
+    <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+        <div class="container-fluid" style="color: #f5ccff">
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")" style="color: #ff8000; font-family: 'Times New Roman'; letter-spacing: 3px"><img src="~/Images/logoimg3.png" style="width:125px; height:107px;" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color: #f5ccff">
+                <span class="navbar-toggler-icon" style="color: #f5ccff"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="color: #f5ccff">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="@Url.Action("Index", "Home")" style="color: #f5ccff; font-family: 'Times New Roman', Times, serif; letter-spacing: 1.5px;">Home</a>
+                    <a class="nav-link" href="@Url.Action("Index", "Excel")" style="color: #f5ccff; font-family: 'Times New Roman', Times, serif; letter-spacing: 1.5px;">Videos</a>
+                    <a class="nav-link" href="@Url.Action("Index", "PDF")" style="color: #f5ccff; font-family: 'Times New Roman', Times, serif; letter-spacing: 1.5px;">Books</a>
+                    <a class="nav-link" href="@Url.Action("Index", "Music")" style="color: #f5ccff; font-family: 'Times New Roman', Times, serif; letter-spacing: 1.5px;">Music</a>
+                    <a class="nav-link" href="@Url.Action("Index", "Weather")" style="color: #f5ccff; font-family: 'Times New Roman', Times, serif; letter-spacing: 1.5px;">Weather</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        @{
+            ViewBag.Title = "Weather Data";
+        }
+
+        <div class="container">
+            <h2 style="color: #f5ccff; font-family: 'Times New Roman', Times, serif;">Weather Data</h2>
+            <br />
+
+            @using (Html.BeginForm())
+            {
+                @*<div class="form-group">
+                <label for="city" style="color: #f5ccff; font-family: 'Times New Roman', Times, serif;">Enter city: </label>
+                <br>
+                <br>
+                @Html.TextBox("city", "", new { @class = "form-control", placeholder = "City name", required = "required" })
+
+                <button type="submit" class="btn btn-primary">Get Weather Data</button>
+            </div>*@
+                <div class="form-group">
+                    <label for="city" style="color: #f5ccff; font-family: 'Times New Roman', Times, serif;font-size:25px;margin-bottom:20px">Enter city: </label>
+                    <div class="input-group">
+                        @Html.TextBox("city", "", new { @class = "form-control", placeholder = "City name", required = "required", style = "margin-right: 20px;" })
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-primary">Get Weather Data</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            }
+
+            @if (Model != null)
+            {
+                <h3>@Model.City @Model.Country</h3>
+                <ul>
+                    <div class="container"style="margin-top:50px">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="card" style="width: 15rem;">
+                                    <img style="height:158px;" src="~/Images/tmp.gif" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tempreture</h5>
+                    <li style="list-style-type: none; color: black; font-family: 'Times New Roman', Times, serif;"><b>@Model.Main.Temperature</b></li>
+            </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card" style="width: 15rem;">
+                                    <img style="height:158px;" src="~/Images/pre.gif" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pressure</h5>
+                                        <li style="list-style-type: none; color: black; font-family: 'Times New Roman', Times, serif;"><b>@Model.Main.Pressure</b></li>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="card" style="width: 15rem;">
+                                    <img style="height:158px;" src="~/Images/humidity.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Humidity</h5>
+                                        <li style="list-style-type: none; color: black; font-family: 'Times New Roman', Times, serif;"><b>@Model.Main.Humidity</b></li>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="card" style="width: 15rem;">
+                                    <img style="height:158px;" src="~/Images/wt.gif" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Description</h5>
+                                        
+                                            <li style="list-style-type: none; color: black; font-family: 'Times New Roman', Times, serif;font-size:15px"><b>@Model.Weather[0].Description</b></li>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   
+                    
+                </ul>
+            }
+
+            @if (ViewBag.Error != null)
+            {
+                <br />
+                <div class="alert alert-danger" role="alert" style="color: #f5ccff; font-family: 'Times New Roman', Times, serif;">
+                    Error: @ViewBag.Error
+                </div>
+            }
+        </div>
+    </div>
+</body>

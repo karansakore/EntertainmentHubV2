@@ -1,0 +1,52 @@
+﻿@model EntertainmentHub.Models.ExcelData
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.Sr_No)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Sr_No)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Title)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Title)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Description)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Description)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.URL)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.URL)
+    </dd>
+
+</dl>
+
+@using (Html.BeginForm("Delete", "ExcelApi", new { id = Model.Sr_No }, FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Delete" class="btn btn-danger" /> ||
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+}

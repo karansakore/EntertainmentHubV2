@@ -1,0 +1,66 @@
+﻿@model IEnumerable<EntertainmentHub.Models.MusicClass>
+<body style="background-color:black">
+    <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+        <div class="container-fluid" style="color: #f5ccff">
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")" style="color: #ff8000; font-family: 'Times New Roman'; letter-spacing: 3px"><img src="~/Images/logoimg3.png" style="width:125px; height:107px;" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color: #f5ccff">
+                <span class="navbar-toggler-icon" style="color: #f5ccff"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="color: #f5ccff">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="@Url.Action("Index", "Home")" style="color: #f5ccff; font-family: 'Times New Roman', Times, serif; letter-spacing: 1.5px;">Home</a>
+                    <a class="nav-link" href="@Url.Action("Index", "Excel")" style="color: #f5ccff; font-family: 'Times New Roman', Times, serif; letter-spacing: 1.5px;">Videos</a>
+                    <a class="nav-link" href="@Url.Action("Index", "PDF")" style="color: #f5ccff; font-family: 'Times New Roman', Times, serif; letter-spacing: 1.5px;">Books</a>
+                    <a class="nav-link" href="@Url.Action("Index", "Music")" style="color: #f5ccff; font-family: 'Times New Roman', Times, serif; letter-spacing: 1.5px;">Music</a>
+                    <a class="nav-link" href="@Url.Action("Index", "Weather")" style="color: #f5ccff; font-family: 'Times New Roman', Times, serif; letter-spacing: 1.5px;">Weather</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    @*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+
+
+    <table class="row justify-content-center mx-auto" style="background-color: black; margin-top:150px;">
+
+
+        @foreach (var item in Model)
+        {
+
+            <tr style="border: 2px solid white; border-radius: 10px;">
+                <td class=" col-md-2">
+                    <a href="@Html.DisplayFor(modelItem => item.URL)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 48px; height: 48px; margin: 8px; fill: #0099ff;">
+                            <path d="M8 5v14l11-7z" />
+                            <path d="M0 0h24v24H0z" fill="none" />
+                        </svg>
+                    </a>
+                </td>
+                <td class=" col-md-2">
+                    <img src="@Html.DisplayFor(modelItem => item.Image)" style="border:0.5px solid white" />
+                </td>
+                <td class=" col-md-2 justify-content-center" style="color: #f5ccff">
+                    <h4 style="font-family:'Times New Roman', Times, serif;letter-spacing:2px;">@Html.DisplayFor(modelItem => item.Title)</h4>
+                </td>
+                <td class=" col-md-2">
+                    <img src="https://drive.google.com/uc?id=1jF3QwYj45sQvSegLcXsqHG8jAr2Uwxc-" />
+                </td>
+                <td class=" col-md-2 text-center justify-content-center" style="margin-top: 50px">
+                        <button onclick="window.location.href = '@Html.DisplayFor(modelItem => item.URL)';" style="padding: 10px; padding-left: 20px; padding-right: 20px; border: 1px solid blue; background-color: #0099ff; color: white; font-weight: bold; border-radius:50%">
+                            Play
+                        </button>
+                    
+
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="5">&nbsp;</td>
+            </tr>
+        }
+
+    </table>
+</body>
